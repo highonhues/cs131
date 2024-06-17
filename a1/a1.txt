@@ -1,0 +1,29 @@
+2./mnt/scratch/ananyasu24
+3.uid is 1253
+groups is 1254
+4.meminfo for memory and for cpu its cpuinfo
+5.MemTotal:       73080640 kB
+6.this info is from the lscpu command: processor(s):              256
+Architecture:        ppc64le
+if id just used cat id get 
+architecture: cpu		: POWER8 (architected), altivec supported
+Speed:  3.425 GHz
+7.info contained in os-release
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+8.Average amt: 4.26891e+06/228710=18.6652
+9.460.04
+10.39909 236.0
+  37140 237.0
+  36990 161.0
+  33678 230.0
+  28506 170.0
+  27895 162.0
+  27485 48.0
+  26782 142.0
+  25051 239.0
+  24609 234.0
+
+
+
+

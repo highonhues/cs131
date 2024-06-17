@@ -1,0 +1,24 @@
+1.cd cs131
+mkdir a1
+cd a1
+r.cd~ 
+pwd
+3.id
+4.ls /proc/ | grep mem*
+5.head /proc/meminfo
+6.head /proc/cpuinfo
+tail /proc/cpuinfo
+cat /proc/cpuinfo
+lscpu
+7.ls /etc/ | grep os.*
+cat /etc/os-release
+8.grep -i "2019-05-12" *.csv > may.csv
+awk -F',' '{sum+=$17; ++n} END { print "Average amt: "sum"/"n"="sum/n }' may.csv
+9.cat may.csv | sort -t',' -r -n -k17 > highestq9.csv
+10.awk -F',' '$4 >= 3' 2019-05.csv > q10.csv
+cut -d',' -f9 q10.csv | sort | uniq -c | sort -nr | head -n 10
+
+
+
+
+
