@@ -72,6 +72,9 @@ Finally mainfunc is executed.
 mainfunc "$1" "$3" "$5"
 ```
 
+## Example use
+![](animals_eg.png)
+
 ## Future work
 
 - The text does not wrap around properly with when there are many columns, this can be worked upon.
