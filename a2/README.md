@@ -75,5 +75,6 @@ mainfunc "$1" "$3" "$5"
 ## Future work
 
 - The text does not wrap around properly with when there are many columns, this can be worked upon.
+  ![](realtor problem.png)
 - More separators such as space, carriage return, line break, form feed, vertical tab can be included.
 - Headers can be specified more clearly
