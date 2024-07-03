@@ -9,7 +9,6 @@ mktable <file> -sep <separator> -div <divider>
 ```
 ## Main Function
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.  
 1. Main function is defined to take with 3 arguments.
 
   ```bash
@@ -73,11 +72,13 @@ mainfunc "$1" "$3" "$5"
 ```
 
 ## Example use
+
 ![](animals_eg.png)
 
 ## Future work
 
 - The text does not wrap around properly with when there are many columns, this can be worked upon.
+  
   ![](realtor_problem.png)
 - More separators such as space, carriage return, line break, form feed, vertical tab can be included.
 - Headers can be specified more clearly
