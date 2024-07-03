@@ -1,0 +1,54 @@
+#!/bin/bash
+
+#Input your file,separator(-sep), and divider(-div) to print an easy view of a table on the terminal
+
+#Main function to print output
+mainfunc() {
+    local file=$1
+    local separator=$2
+    local divider=$3
+
+    #Check equality
+    if [[ "$separator" == "," ]]; then
+        awk -F, -v div="$divider" '
+        {
+            for (i = 1; i <= NF; i++) {
+                printf "%-16s%s", $i, div;
+            }
+            printf "\n";
+        }' "$file"
+
+
+    elif [[ "$separator" == "\t" ]]; then
+        awk -F'\t' -v div="$divider" '
+        {
+            for (i = 1; i <= NF; i++) {
+                printf "%-16s%s", $i, div;
+            }
+            printf "\n";
+        }' "$file"
+
+
+    else
+        echo "Sorry! can only work with comma or tab separated files."
+    fi
+}
+
+
+#When correct input not provided
+if [[ $# -ne 5 ]]; then
+    echo "Usage: $0 <file> -sep <separator> -div <divider>"
+    echo "Separators allowed are ',' or '\t'."
+    exit 1
+fi
+
+# Checkfor -sep and -div
+
+if [[ "$2" != "-sep" || "$4" != "-div" ]]; then
+    echo "Usage: $0 <file> -sep <separator> -div <divider>"
+    echo "Separators allowed are ',' or '\t'."
+    exit 1
+fi
+
+mainfunc "$1" "$3" "$5"
+
