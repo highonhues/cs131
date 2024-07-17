@@ -1,0 +1,34 @@
+prep
+
+0. git clone https://github.com/highonhues/cs131.git
+
+ cat /etc/passwd > a3.txt
+
+sed task
+
+ 1.
+   cd taxidata
+    mv 2019-10.csv /home/ananya_gupta/cs131/a3
+    sed -n '/^1.0/p' 2019-10.csv > vendors2.csv
+    wc vendors2.csv >> a3.txt
+   
+2.
+   sed -e 's/://g' -e 's/"//g' -e 's/-//g' 2019-10.csv > no-separators.csv
+  
+    head -10 no-separators.csv >> a3.txt
+3. 
+  sed 's/\.[0-9]*//g' no-separators.csv > no-fractions.csv
+  head -n 10 no-fractions.csv >> a3.txt
+
+awk task
+
+4.  
+awk -F, 'BEGIN { printf "tip\tFreq\n" } $17 >= 10.00 { tipamt[$14]++ } END { for (amt in tipamt) print amt, tipamt[amt] }' 2019-10.csv > results.txt
+
+5.
+   sort -k2 -nr results.txt > sorted.csv
+   head -n 6 sorted.csv
+   head -n 6 sorted.csv >> a3.txt
+
+
+
